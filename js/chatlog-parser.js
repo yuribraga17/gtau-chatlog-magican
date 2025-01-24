@@ -280,11 +280,11 @@ $(document).ready(function() {
         if (/\[[^\]]+ -> [^\]]+\]/.test(line)) return wrapSpan("depColor", line);
         if (line.startsWith("*")) return wrapSpan("me", line);
         if (line.startsWith(">")) return wrapSpan("ame", line);
-        if (lowerLine.includes("(phone) *")) return wrapSpan("me", line);
+        if (lowerLine.includes("(cellphone) *")) return wrapSpan("me", line);
         if (lowerLine.includes("whispers") || line.startsWith("(Car)")) {
             return handleWhispers(line);
         }        
-        if (lowerLine.includes("says (phone):")) return handleCellphone(line);
+        if (lowerLine.includes("says (cellphone):")) return handleCellphone(line);
         if (/\[[^\]]+ -> [^\]]+\]/.test(line)) return wrapSpan("depColor", line);
         if (lowerLine.includes("[megaphone]:")) return wrapSpan("yellow", line);
         if (lowerLine.startsWith("info:")) {
